@@ -1,0 +1,4 @@
+public interface IScoreObserver {
+ void onScoreChanged(int newScore);
+ void onLinesCleared(int linesCleared, int totalScore);
+}
