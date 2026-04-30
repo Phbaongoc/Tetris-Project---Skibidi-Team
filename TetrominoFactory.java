@@ -4,12 +4,12 @@ public class TetrominoFactory{
     private Random random;
 
     public TetrominoFactory(){
-        this.random = new.random();
+        this.random = new random();
     }
 
     //Create a random Tetromino piece
     public Tetromino createTetromino(){
-        PieceType[] types = PiceType.values();
+        PieceType[] types = PieceType.values();
         PieceType randomType = types[random.nextInt(types.length)];
         return createSpecificTetromino(randomType);
     }
