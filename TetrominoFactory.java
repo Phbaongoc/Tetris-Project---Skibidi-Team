@@ -4,7 +4,7 @@ public class TetrominoFactory{
     private Random random;
 
     public TetrominoFactory(){
-        this.random = new random();
+        this.random = new Random();
     }
 
     //Create a random Tetromino piece
