@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 public class GamePanel extends JPanel implements IScoreObserver, KeyListener {
     private static final int CELL_SIZE = 30;
+    private static final int PANEL_WIDTH = Board.WIDTH * CELL_SIZE;
     private static final int PANEL_HEIGHT = Board.HEIGHT * CELL_SIZE;
     private static final Color[] PIECE_COLORS = {
         new Color(0, 240, 240), // I - cyan
@@ -55,7 +56,7 @@ public class GamePanel extends JPanel implements IScoreObserver, KeyListener {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_O);
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         drawBackground(g2);
         drawGrid(g2);
         if (game.isRunning() || game.isGameOver()) {
