@@ -24,7 +24,7 @@ public class Game {
         scoreManager.reset();
         isGameOver = false;
         isPaused = false;
-        isRunning = false;
+        isRunning = true;
 
         currentPiece = factory.createTetromino();
         nextPiece = factory.createTetromino();
